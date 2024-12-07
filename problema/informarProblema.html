@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Problema - Gestão de Veículos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <div class="header-with-back">
+                <button onclick="window.history.back()" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+                <div class="logo-header">
+                    <div class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="car-icon">
+                            <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
+                            <circle cx="6.5" cy="16.5" r="2.5"/>
+                            <circle cx="16.5" cy="16.5" r="2.5"/>
+                        </svg>
+                        <div class="dot"></div>
+                    </div>
+                    <h1>Gestão de Veículos</h1>
+                    <p>Unidade Itapipoca - CE</p>
+                </div>
+            </div>
+
+            <div class="problem-form">
+                <h2 class="section-title">Informe o Problema</h2>
+                
+                <div class="problem-categories">
+                    <button class="category-button">
+                        <span class="category-icon">🔧</span>
+                        Mecânico
+                    </button>
+                    <button class="category-button">
+                        <span class="category-icon">⚡</span>
+                        Elétrico
+                    </button>
+                    <button class="category-button">
+                        <span class="category-icon">🛞</span>
+                        Pneus
+                    </button>
+                    <button class="category-button">
+                        <span class="category-icon">📝</span>
+                        Outros
+                    </button>
+                </div>
+
+                <div class="input-with-icon">
+                    <textarea 
+                        class="input problem-input" 
+                        placeholder="Descreva o problema detalhadamente..."
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="problem-severity">
+                    <span class="severity-label">Gravidade:</span>
+                    <div class="severity-options">
+                        <label class="severity-option">
+                            <input type="radio" name="severity" value="low">
+                            <span class="severity-badge low">Baixa</span>
+                        </label>
+                        <label class="severity-option">
+                            <input type="radio" name="severity" value="medium">
+                            <span class="severity-badge medium">Média</span>
+                        </label>
+                        <label class="severity-option">
+                            <input type="radio" name="severity" value="high">
+                            <span class="severity-badge high">Alta</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="window.location.href='problemaRegistrado.html'" class="button button-green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 6L9 17l-5-5"/>
+                    </svg>
+                    Registrar Problema
+                </button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

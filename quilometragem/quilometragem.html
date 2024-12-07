@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção - Gestão de Veículos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <div class="header-with-back">
+                <button onclick="window.history.back()" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6"/>
+                    </svg>
+                </button>
+                <div class="logo-header">
+                    <div class="logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="car-icon">
+                            <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
+                            <circle cx="6.5" cy="16.5" r="2.5"/>
+                            <circle cx="16.5" cy="16.5" r="2.5"/>
+                        </svg>
+                        <div class="dot"></div>
+                    </div>
+                    <h1>Gestão de Veículos</h1>
+                    <p>Unidade Itapipoca - CE</p>
+                </div>
+            </div>
+            <div class="maintenance-options">
+                <h2 class="section-title">Manutenção</h2>
+                
+                <div class="mileage-input">
+                    <h3 class="subsection-title">Informe a quilometragem atual:</h3>
+                    <div class="mileage-form">
+                        <div class="input-with-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="input-icon">
+                                <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"/>
+                                <path d="M5 12h14"/>
+                            </svg>
+                            <input type="number" class="input" id="mileageInput" placeholder="Digite a quilometragem" min="0">
+                        </div>
+                        <div class="last-mileage">
+                            <span class="info-text">Última quilometragem registrada: <strong>45.280 KM</strong></span>
+                        </div>
+                        <button class="button button-green" onclick="confirmMileage()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            Confirmar Quilometragem
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function confirmMileage() {
+                    const mileageInput = document.getElementById('mileageInput');
+                    const mileage = mileageInput.value;
+                    
+                    if (!mileage) {
+                        alert('Por favor, insira a quilometragem.');
+                        return;
+                    }
+
+                    if (mileage < 45280) {
+                        alert('A quilometragem informada não pode ser menor que a última registrada.');
+                        return;
+                    }
+
+                    // Aqui você pode adicionar a lógica para salvar a quilometragem
+                    window.location.href = 'trip-complete.html';
+                }
+            </script>
+        </div>
+    </main>
+</body>
+</html>

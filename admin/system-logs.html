@@ -1,0 +1,115 @@
+<!-- system-logs.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logs do Sistema - Gestão de Veículos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar igual ao admin-dashboard.html -->
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <!-- Header igual ao admin-dashboard.html -->
+            </header>
+
+            <div class="admin-content">
+                <div class="content-header">
+                    <h2>Logs do Sistema</h2>
+                    <div class="header-actions">
+                        <button class="button button-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Exportar Logs
+                        </button>
+                        <button class="button button-red">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 6h18"/>
+                                <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/>
+                                <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                            </svg>
+                            Limpar Logs
+                        </button>
+                    </div>
+                </div>
+
+                <div class="filters-bar">
+                    <div class="search-filter">
+                        <input type="text" class="input" placeholder="Buscar nos logs...">
+                    </div>
+                    <div class="select-filter">
+                        <select class="input">
+                            <option value="">Tipo de Log</option>
+                            <option value="error">Erro</option>
+                            <option value="warning">Alerta</option>
+                            <option value="info">Informação</option>
+                            <option value="debug">Debug</option>
+                        </select>
+                    </div>
+                    <div class="date-filter">
+                        <input type="date" class="input" placeholder="Data inicial">
+                        <input type="date" class="input" placeholder="Data final">
+                    </div>
+                </div>
+
+                <div class="logs-container">
+                    <div class="log-entry error">
+                        <div class="log-timestamp">2024-03-15 14:30:22</div>
+                        <div class="log-level">ERRO</div>
+                        <div class="log-message">Falha na conexão com o banco de dados</div>
+                        <div class="log-details">
+                            <pre>
+Error: Connection refused
+at Database.connect (/app/database.js:45:12)
+at async Server.start (/app/server.js:23:5)
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="log-entry warning">
+                        <div class="log-timestamp">2024-03-15 14:29:55</div>
+                        <div class="log-level">ALERTA</div>
+                        <div class="log-message">Tentativa de login mal sucedida</div>
+                        <div class="log-details">
+                            Usuário: john.doe@example.com
+                            IP: 192.168.1.100
+                        </div>
+                    </div>
+
+                    <div class="log-entry info">
+                        <div class="log-timestamp">2024-03-15 14:28:30</div>
+                        <div class="log-level">INFO</div>
+                        <div class="log-message">Nova viagem registrada</div>
+                        <div class="log-details">
+                            Veículo: ONIX - PNP 2634
+                            Destino: Fortaleza
+                            Usuário: Maria Silva
+                        </div>
+                    </div>
+
+                    <!-- Mais entradas de log... -->
+                </div>
+
+                <div class="pagination">
+                    <button class="button button-outline" disabled>Anterior</button>
+                    <div class="pagination-numbers">
+                        <button class="page-number active">1</button>
+                        <button class="page-number">2</button>
+                        <button class="page-number">3</button>
+                        <span>...</span>
+                        <button class="page-number">10</button>
+                    </div>
+                    <button class="button button-outline">Próxima</button>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viagem Concluída - Gestão de Veículos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <div class="card">
+            <div class="logo-header">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="car-icon">
+                        <path d="M14 16H9m10 0h3v-3.15a1 1 0 0 0-.84-.99L16 11l-2.7-3.6a1 1 0 0 0-.8-.4H5.24a2 2 0 0 0-1.8 1.1l-.8 1.63A6 6 0 0 0 2 12.42V16h2"/>
+                        <circle cx="6.5" cy="16.5" r="2.5"/>
+                        <circle cx="16.5" cy="16.5" r="2.5"/>
+                    </svg>
+                    <div class="dot"></div>
+                </div>
+                <h1>Gestão de Veículos</h1>
+                <p>Unidade Itapipoca - CE</p>
+            </div>
+
+            <div class="trip-complete">
+                <div class="trip-complete-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h2 class="trip-complete-title">Viagem concluída!</h2>
+                <p class="trip-complete-message">Sua viagem foi registrada com sucesso.</p>
+                <div class="trip-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Horário de Início</span>
+                        <span class="summary-value" id="startTime">10:30</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Horário de Término</span>
+                        <span class="summary-value" id="endTime">11:45</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Duração Total</span>
+                        <span class="summary-value" id="duration">1h 15min</span>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <a href="../veiculos/veiculos.html" class="button button-outline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon">
+                            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                        INÍCIO
+                    </a>
+                    <a href="../relatorios/relatorio.html" class="button button-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="button-icon">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <line x1="10" y1="9" x2="8" y2="9"/>
+                        </svg>
+                        VER RELATÓRIO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

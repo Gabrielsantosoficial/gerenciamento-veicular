@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métricas em Tempo Real - Gestão de Veículos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar igual ao admin-dashboard.html -->
+        
+        <main class="admin-main">
+            <header class="admin-header">
+                <!-- Header igual ao admin-dashboard.html -->
+            </header>
+
+            <div class="admin-content">
+                <div class="content-header">
+                    <h2>Métricas em Tempo Real</h2>
+                    <div class="header-actions">
+                        <div class="refresh-info">
+                            Última atualização: há 30 segundos
+                            <button class="button button-icon" title="Atualizar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <button class="button button-outline">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Exportar Relatório
+                        </button>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <!-- KPIs -->
+                    <div class="metrics-row">
+                        <div class="metric-card">
+                            <div class="metric-header">
+                                <h3>Veículos Ativos</h3>
+                                <div class="metric-trend positive">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="18 15 12 9 6 15"/>
+                                    </svg>
+                                    +5%
+                                </div>
+                            </div>
+                            <div class="metric-value">42</div>
+                            <div class="metric-chart">
+                                <!-- Gráfico de linha simplificado -->
+                                <svg class="sparkline" width="100" height="30">
+                                    <path d="M0 20 L10 15 L20 18 L30 12 L40 16 L50 10 L60 14 L70 8 L80 13 L90 7 L100 10" 
+                                          fill="none" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Mais cards de métricas... -->
+                    </div>
+
+                    <!-- Gráficos Principais -->
+                    <div class="charts-grid">
+                        <div class="chart-card full-width">
+                            <div class="chart-header">
+                                <h3>Consumo de Combustível em Tempo Real</h3>
+                                <div class="chart-actions">
+                                    <select class="input">
+                                        <option>Últimas 24 horas</option>
+                                        <option>Última semana</option>
+                                        <option>Último mês</option>
+                                    </select>
+                                    <button class="button button-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="3"/>
+                                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="chart-content">
+                                <!-- Área do gráfico -->
+                                <div class="chart-placeholder">
+                                    <!-- Placeholder para o gráfico real -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>Distribuição da Frota</h3>
+                                <div class="chart-legend">
+                                    <span class="legend-item">
+                                        <span class="legend-color" style="background-color: #2563eb"></span>
+                                        Em Rota
+                                    </span>
+                                    <span class="legend-item">
+                                        <span class="legend-color" style="background-color: #16a34a"></span>
+                                        Disponível
+                                    </span>
+                                    <span class="legend-item">
+                                        <span class="legend-color" style="background-color: #dc2626"></span>
+                                        Manutenção
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="chart-content">
+                                <!-- Área do gráfico -->
+                                <div class="chart-placeholder">
+                                    <!-- Placeholder para o gráfico real -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chart-card">
+                            <div class="chart-header">
+                                <h3>Alertas por Categoria</h3>
+                            </div>
+                            <div class="chart-content">
+                                <!-- Área do gráfico -->
+                                <div class="chart-placeholder">
+                                    <!-- Placeholder para o gráfico real -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Alertas em Tempo Real -->
+                    <div class="realtime-alerts">
+                        <div class="alerts-header">
+                            <h3>Alertas em Tempo Real</h3>
+                            <span class="alerts-count">3 novos</span>
+                        </div>
+                        <div class="alerts-list">
+                            <div class="alert-item urgent">
+                                <div class="alert-time">Agora</div>
+                                <div class="alert-content">
+                                    <h4>Excesso de Velocidade</h4>
+                                    <p>Veículo ABC-1234 ultrapassou limite de velocidade</p>
+                                    <div class="alert-meta">
+                                        <span>110 km/h em zona de 80 km/h</span>
+                                        <button class="button button-small">Ver no Mapa</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mais alertas... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
